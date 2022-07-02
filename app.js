@@ -194,4 +194,9 @@ function getAQI(index) {
     return quality[index];
 }
 
-app.listen(3000, () => console.log("Server Started at port 3000")); 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, () => console.log("Server Started at port 3000")); 
