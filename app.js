@@ -97,7 +97,7 @@ app.post("/", (req, res) => {
                                 });    
                             } else {
                                 unvalid = true;
-                                errMessage = "No data found for" + query + "!";
+                                errMessage = "No data found for " + query + "!";
                                 res.redirect("/");
                             }
                         
