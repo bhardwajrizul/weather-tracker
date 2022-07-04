@@ -49,8 +49,8 @@ app.post("/", (req, res) => {
                     
                     response.on('data', (data) => {
                         const weatherData = JSON.parse(data);
-                        let sunrise_time = timeConverter(weatherData.sys.sunrise);
-                        let sunset_time = timeConverter(weatherData.sys.sunset);
+                        let sunrise_time = timeConverter(weatherData.sys.sunrise + weatherData.timezone);
+                        let sunset_time = timeConverter(weatherData.sys.sunset + weatherData.timezone);
 
                         // console.log( {
                         //     coord : weatherData.coord,
@@ -160,10 +160,19 @@ app.post("/goback", (req,res) => {
 
 
 function timeConverter(UNIX_timestamp){
+    var time = null;
     var a = new Date(UNIX_timestamp * 1000);
     var hour = a.getHours();
     var min = a.getMinutes();
-    var time = hour + ':' + min ;
+    
+    if (hour >= 0 && hour < 12){
+        time = hour + ':' + min + " AM";
+        return time;
+    } else if (hour == 12){
+        time = hour + ':' + min + " PM";
+        return time;
+    }
+    time = (hour - 12) + ':' + min + " PM";
     return time;
 }
 
@@ -191,7 +200,7 @@ function unixConverter(UNIX_timestamp){
 
 function getAQI(index) {
     let quality = ["Good","Fair","Moderate","Poor", "Very Poor"];
-    return quality[index];
+    return quality[index - 1];
 }
 
 let port = process.env.PORT;
