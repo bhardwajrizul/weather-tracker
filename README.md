@@ -91,14 +91,14 @@ https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 ### **Bootstrap**
 [Bootstrap](https://getbootstrap.com/) is a powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins. 
 
-Download using npm (alternatively use a CDN)
+Download using npm (alternatively use a `CDN`)
 ```bash
 $ npm i bootstrap@5.2.0-beta1
 ```
 
 **Note:** *This is not required as I used a* `CDN` *for this project.*
 
-CDN Link for CSS 
+`CDN` Link for CSS 
 [Click Here](https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css)
 
 Included inside `HTML` using
@@ -108,7 +108,7 @@ Included inside `HTML` using
   rel="stylesheet">
 </head>
 ```
-CDN Link for JS 
+`CDN` Link for JS 
 [Click here](https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js)
 
 Included inside `HTML` using
@@ -136,7 +136,7 @@ Included inside `HTML` using
 ```bash
 $ npm install jquery
 ```
-*Alternatively, you can also use a CDN*
+*Alternatively, you can also use a `CDN`*
 
 ```html
 <body>
