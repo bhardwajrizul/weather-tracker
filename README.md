@@ -3,7 +3,7 @@
 *Weather Tracker provides weather forcast, nowcast in a fast and elegant way!*
 
 Check the website here : 
-https://weather-tracker-rizul.herokuapp.com/
+https://weather-tracker-if4y.onrender.com/
 ## Instructions
 
 Clone or download project:
